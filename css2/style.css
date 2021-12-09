@@ -1,0 +1,153 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ebc8c8;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.skw-pages {
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+}
+
+.skw-page {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.skw-page__half {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100vh;
+	transition: transform 1s;
+}
+
+.skw-page__half--left {
+	left: 0;
+	transform: translate3d(-32.4vh, 100%, 0);
+}
+
+.skw-page__half--right {
+	left: 50%;
+	transform: translate3d(32.4vh, -100%, 0);
+}
+
+.skw-page.active .skw-page__half {
+	transform: translate3d(0, 0, 0);
+}
+
+.skw-page__skewed {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 140%;
+	height: 100%;
+	transform: skewX(-18deg);
+	background: rgb(121, 113, 113);
+}
+
+.skw-page__half--left .skw-page__skewed {
+	left: -40%;
+}
+
+.skw-page__half--right .skw-page__skewed {
+	right: -40%;
+}
+
+.skw-page__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0 30%;
+	color: #fff;
+	transform: skewX(18deg);
+	transition: transform 1s, opacity 1s;
+	background-size: cover;
+}
+
+.skw-page__half--left .skw-page__content {
+	padding-left: 30%;
+	padding-right: 30%;
+	transform-origin: 100% 0;
+}
+
+.skw-page__half--right .skw-page__content {
+	padding-left: 30%;
+	padding-right: 30%;
+	transform-origin: 0 100%;
+}
+
+.skw-page.inactive .skw-page__content {
+	opacity: 0.5;
+	transform: skewX(18deg) scale(0.95);
+}
+
+.skw-page__heading {
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	font-size: 35px;
+	text-align: center;
+}
+
+.skw-page__description {
+	font-size: 23px;
+	text-align: justify;
+}
+
+.skw-page__link {
+	color: #FFA0A0;
+}
+
+.skw-page-1 .skw-page__half--left .skw-page__content {
+	background-image: url("https://w-dog.ru/wallpapers/5/18/289291145046987/evropejskaya-koshka-dikij-kot-morda-vzglyad.jpg");
+}
+
+.skw-page-1 .skw-page__half--right .skw-page__content {
+	background: #7a7373;
+}
+
+.skw-page-2 .skw-page__half--left .skw-page__content {
+	background: #464444;
+}
+
+.skw-page-2 .skw-page__half--right .skw-page__content {
+	background-image: url("https://img.desktopwallpapers.ru/animals/pics/wide/1920x1200/dedfafbda01d0f6cf8a056b10b74f54c.jpg");
+}
+
+.skw-page-3 .skw-page__half--left .skw-page__content {
+	background-image: url("https://www.fotoprizer.ru/img/121968_orig.jpg");
+}
+
+.skw-page-3 .skw-page__half--right .skw-page__content {
+	background: #3b3a3a;
+}
+
+.skw-page-4 .skw-page__half--left .skw-page__content {
+	background: #292929;
+}
+
+.skw-page-4 .skw-page__half--right .skw-page__content {
+	background-image: url("https://avatars.mds.yandex.net/get-zen_doc/170671/pub_5a6d6591fd96b118d5aa8ae2_5a6d68b9c890100a114c2979/scale_1200");
+}
+
+.skw-page-5 .skw-page__half--left .skw-page__content {
+	background-image: url("https://get.wallhere.com/photo/1920x1200-px-animals-cats-eyes-kittens-Pets-1645219.jpg");
+}
+
+.skw-page-5 .skw-page__half--right .skw-page__content {
+	background: #292929;
+}
